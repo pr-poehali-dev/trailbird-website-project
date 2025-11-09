@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 215 25% 27%;
+    --background: 45 30% 96%;
+    --foreground: 25 35% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card: 42 45% 98%;
+    --card-foreground: 25 35% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 42 45% 98%;
+    --popover-foreground: 25 35% 15%;
 
-    --primary: 200 85% 45%;
+    --primary: 165 75% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 170 40% 60%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 40 60% 70%;
+    --secondary-foreground: 25 35% 15%;
 
-    --muted: 210 30% 92%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 45 25% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 190 70% 50%;
+    --accent: 180 50% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 25% 88%;
-    --input: 210 25% 88%;
-    --ring: 200 85% 45%;
+    --border: 45 20% 85%;
+    --input: 45 20% 92%;
+    --ring: 165 75% 35%;
 
-    --radius: 0.75rem;
+    --radius: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -161,5 +161,38 @@
     50% {
       transform: rotate(-5deg);
     }
+  }
+
+  .brutalist-card {
+    border: 4px solid hsl(var(--foreground));
+    box-shadow: 8px 8px 0 hsl(var(--foreground));
+    transition: all 0.3s ease;
+  }
+
+  .brutalist-card:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 4px 4px 0 hsl(var(--foreground));
+  }
+
+  .mesh-bg {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        hsl(var(--border)) 0px,
+        hsl(var(--border)) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        hsl(var(--border)) 0px,
+        hsl(var(--border)) 1px,
+        transparent 1px,
+        transparent 40px
+      );
+  }
+
+  .diagonal-split {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 }
