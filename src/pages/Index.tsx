@@ -66,16 +66,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30 relative overflow-x-hidden">
-      <div className="fixed top-20 left-0 w-full h-full pointer-events-none z-10">
-        <div className="text-6xl animate-fly-across" style={{ animationDelay: '0s' }}>🦅</div>
-        <div className="text-5xl animate-fly-across" style={{ animationDelay: '7s' }}>🦅</div>
-        <div className="text-6xl animate-fly-across" style={{ animationDelay: '14s' }}>🦅</div>
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-10">
+        <div className="bird animate-fly-across" style={{ animationDelay: '0s' }} />
+        <div className="bird animate-fly-across" style={{ animationDelay: '8s', top: '30%' }} />
+        <div className="bird animate-fly-across" style={{ animationDelay: '16s', top: '60%' }} />
       </div>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 animate-fade-in">
-              <span className="text-3xl animate-float">🦅</span>
+            <div className="flex items-center gap-3 animate-fade-in">
+              <div className="bird scale-75 animate-float" />
               <h1 className="text-2xl font-bold text-primary">Trailbird</h1>
             </div>
             <div className="hidden md:flex items-center gap-6">
@@ -103,8 +103,8 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in relative z-20">
-              <div className="inline-block">
-                <span className="text-6xl animate-float inline-block">🦅</span>
+              <div className="inline-block mb-4">
+                <div className="bird scale-150 animate-float" />
               </div>
               <h2 className="text-5xl md:text-6xl font-bold leading-tight">
                 Планируйте путешествия
@@ -324,8 +324,8 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-3xl animate-float">🦅</span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bird scale-75 animate-float" />
                 <h3 className="text-xl font-bold">Trailbird</h3>
               </div>
               <p className="text-sm opacity-80">Ваш проводник в мир приключений</p>

@@ -112,3 +112,54 @@
     font-weight: 700;
   }
 }
+
+@layer components {
+  .bird {
+    position: relative;
+    width: 60px;
+    height: 30px;
+  }
+
+  .bird::before,
+  .bird::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 3px;
+    background: hsl(var(--primary));
+    border-radius: 2px;
+  }
+
+  .bird::before {
+    left: 0;
+    transform-origin: right center;
+    animation: wing-left 0.8s ease-in-out infinite;
+  }
+
+  .bird::after {
+    right: 0;
+    transform-origin: left center;
+    animation: wing-right 0.8s ease-in-out infinite;
+  }
+
+  @keyframes wing-left {
+    0%,
+    100% {
+      transform: rotate(-25deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+
+  @keyframes wing-right {
+    0%,
+    100% {
+      transform: rotate(25deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+  }
+}
