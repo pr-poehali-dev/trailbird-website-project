@@ -65,12 +65,17 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30 relative overflow-x-hidden">
+      <div className="fixed top-20 left-0 w-full h-full pointer-events-none z-10">
+        <div className="text-6xl animate-fly-across" style={{ animationDelay: '0s' }}>🦅</div>
+        <div className="text-5xl animate-fly-across" style={{ animationDelay: '7s' }}>🦅</div>
+        <div className="text-6xl animate-fly-across" style={{ animationDelay: '14s' }}>🦅</div>
+      </div>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 animate-fade-in">
-              <span className="text-3xl">🦅</span>
+              <span className="text-3xl animate-float">🦅</span>
               <h1 className="text-2xl font-bold text-primary">Trailbird</h1>
             </div>
             <div className="hidden md:flex items-center gap-6">
@@ -97,7 +102,10 @@ const Index = () => {
       <section id="home" className="pt-32 pb-20 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-6 animate-fade-in relative z-20">
+              <div className="inline-block">
+                <span className="text-6xl animate-float inline-block">🦅</span>
+              </div>
               <h2 className="text-5xl md:text-6xl font-bold leading-tight">
                 Планируйте путешествия
                 <span className="text-primary block">как альбатрос</span>
@@ -116,13 +124,13 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative animate-scale-in">
+            <div className="relative animate-scale-in z-20">
               <img
                 src="https://cdn.poehali.dev/projects/4ba8bacf-4d47-4b92-b5e1-e80d30a2347c/files/a422d62a-25fa-4b5b-b969-b4b8ca0f36cf.jpg"
                 alt="Альбатрос в полете"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-xl">
+              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-xl animate-pulse-glow">
                 <p className="text-3xl font-bold">500+</p>
                 <p className="text-sm">Маршрутов</p>
               </div>
@@ -190,7 +198,7 @@ const Index = () => {
                 className="text-center space-y-4 animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto hover:bg-primary hover:text-primary-foreground transition-all">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto hover:bg-primary hover:text-primary-foreground transition-all hover:animate-float">
                   <Icon name={step.icon as any} size={32} />
                 </div>
                 <h3 className="text-xl font-bold">{step.title}</h3>
@@ -317,7 +325,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-3xl">🦅</span>
+                <span className="text-3xl animate-float">🦅</span>
                 <h3 className="text-xl font-bold">Trailbird</h3>
               </div>
               <p className="text-sm opacity-80">Ваш проводник в мир приключений</p>
